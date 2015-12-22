@@ -1,2 +1,7 @@
-<h1>WorkingDays#new</h1>
-<p>Find me in app/views/working_days/new.html.erb</p>
+<%= simple_form_for @working_day do |f| %>
+  <%= f.input :start_of_day,:as => :time_picker,
+              input_html: {data: {date_options: { minDate: Time.zone.now }}} %>
+  <%= f.input :end_of_day, :as => :time_picker  %>
+  <%= f.input :divider_partition_hour %>
+  <%= f.submit 'Create', :class => 'btn btn-primary' %>
+<% end %>

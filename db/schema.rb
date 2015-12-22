@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20151211124730) do
 
   create_table "slots", force: :cascade do |t|
-    t.time     "start_time"
-    t.time     "end_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.boolean  "selected"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 20151211124730) do
   add_index "slots", ["working_day_id"], name: "index_slots_on_working_day_id"
 
   create_table "working_days", force: :cascade do |t|
-    t.time     "start_of_day"
-    t.time     "end_of_day"
-    t.integer  "divider_partition_hour"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "start_of_day"
+    t.datetime "end_of_day"
+    t.integer  "divider_partition_hour", default: 60
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
 end
