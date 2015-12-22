@@ -1,7 +1,8 @@
 
 <% @working_days.each do |working_day| %>
-  <h4><%= working_day.start_of_day %></h4>
-  <h4><%= working_day.end_of_day %></h4>
+  <%= link_to working_day_path(working_day) do %>
+    <h4><%= working_day.start_of_day %> to <%= working_day.end_of_day %></h4>
+  <% end %>
 <% end %>
 <hr />
 
