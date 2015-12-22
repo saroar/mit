@@ -1,0 +1,8 @@
+<h1>Show page</h1>
+
+<h4><%= @working_day.start_of_day %></h4>
+<h4><%= @working_day.end_of_day %></h4>
+<% @slots.each do |slot| %>
+  <h4><%= slot.start_time.strftime("%H" ":" "%M") %> to
+  <%= slot.end_time.strftime("%H" ":" "%M") %></h4>
+<% end %>

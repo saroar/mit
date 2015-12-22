@@ -1,0 +1,8 @@
+
+<% @working_days.each do |working_day| %>
+  <h4><%= working_day.start_of_day %></h4>
+  <h4><%= working_day.end_of_day %></h4>
+<% end %>
+<hr />
+
+<h2><%= link_to "Create a list of slots", working_days_new_path, class: 'btn btn-primary' %></h2>
