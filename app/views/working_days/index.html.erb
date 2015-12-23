@@ -1,7 +1,7 @@
 
 <% @working_days.each do |working_day| %>
   <%= link_to working_day_path(working_day) do %>
-    <h4><%= working_day.start_of_day %> to <%= working_day.end_of_day %></h4>
+    <h4 class="non"><%= working_day.start_of_day.strftime("%A" " " "%H" ":" "%M" " " "%D " "%Y") %> to <%= working_day.end_of_day.strftime(" " "%H" ":" "%M" " " "%Y") %></h4>
   <% end %>
 <% end %>
 <hr />

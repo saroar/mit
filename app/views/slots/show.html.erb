@@ -1,1 +1,3 @@
-<%= @slot.start_time.strftime("%H" ":" "%M") %> to <%= @slot.end_time.strftime("%H" ":" "%M") %>
+<div class="row">
+  <%= @slot.start_time.strftime("%A" " " "%H" ":" "%M") %> to <%= @slot.end_time.strftime("%H" ":" "%M") %>
+</div>

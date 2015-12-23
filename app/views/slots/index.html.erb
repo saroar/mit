@@ -1,6 +1,7 @@
 <h1>Hi</h1>
 <% @slots.each do |s| %>
   <%= button_to select_slot_path(s), method: :patch do %>
-		<%= s.start_time.strftime("%H" ":" "%M") %> to <%= s.end_time.strftime("%H" ":" "%M") %>
+		<%= s.start_time.strftime("%A" " " "%H" ":" "%M") %> to
+    <%= s.end_time.strftime("%H" ":" "%M") %>
 	<% end %>
 <% end %>
