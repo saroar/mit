@@ -28,6 +28,6 @@ class WorkingDaysController < ApplicationController
   private
 
   def working_parmas
-    params.require(:working_day).permit(:start_of_day, :end_of_day, :slot_id)
+    params.require(:working_day).permit(:start_of_day, :end_of_day, :divider_partition_hour, :slot_id)
   end
 end

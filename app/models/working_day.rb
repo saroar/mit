@@ -11,7 +11,7 @@ class WorkingDay < ActiveRecord::Base
     i = 0
     while i < slots_number
       # binding.pry
-      start = start_of_day + divider_partition_hour * i
+      start = start_of_day + (divider_partition_hour * i ) * 60
       i += 1
       Slot.create(start_time: start, end_time: start + ( divider_partition_hour * 60 ), selected: false, working_day_id: id)
     end
